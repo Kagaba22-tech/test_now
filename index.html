@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your existing head content remains unchanged -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAGS Collections</title>
+    <style>
+        /* Your existing styles remain unchanged */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 5px;
+    }
+
+    header {
+        background-color: #cffcf0;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1 {
+        color: #000;
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .product-item {
+        text-align: center;
+    }
+
+    .product-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .product-details {
+        margin-top: 5px;
+    }
+
+    .product-name {
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .product-price {
+        color: #ff1493;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    button {
+        background-color: #000;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-size: 12px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        background-color: #0e0d0d;
+    }
+
+    #cart {
+        background-color: #e0e0e0;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    #cart-items {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #cart-items li {
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #cart-items li:last-child {
+        border-bottom: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>KAGS COLLECTIONS</h1>
+        </header>
+
+    <div class="products">
+        <div class="product-item">
+            <img src="Virtualthreads (2).jpg" alt="Kags-1" onclick="addToCart('Kags-1', 29.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-1</div>
+                <div class="product-price">$39.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (3).jpg" alt="Kags-1" onclick="addToCart('Kags-1', 29.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-1</div>
+                <div class="product-price">$39.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (10).jpg" alt="Kags-2" onclick="addToCart('Kags-2', 29.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-2</div>
+                <div class="product-price">$29.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (11).jpg" alt="Kags-2" onclick="addToCart('Kags-2', 29.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-2</div>
+                <div class="product-price">$29.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (4).jpg" alt="Kags-3" onclick="addToCart('Kags-3', 39.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-3</div>
+                <div class="product-price">$39.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (5).jpg" alt="Kags-3" onclick="addToCart('Kags-3', 39.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-3</div>
+                <div class="product-price">$39.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (8).jpg" alt="Kags-4" onclick="addToCart('Kags-4', 34.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-4</div>
+                <div class="product-price">$29.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (9).jpg" alt="Kags-4" onclick="addToCart('Kags-4', 44.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-4</div>
+                <div class="product-price">$29.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (6).jpg" alt="Kags-5" onclick="addToCart('Kags-5', 49.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-5</div>
+                <div class="product-price">$19.99</div>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="Virtualthreads (7).jpg" alt="Kags-5" onclick="addToCart('Kags-6', 59.99)">
+            <div class="product-details">
+                <div class="product-name">Kags-5</div>
+                <div class="product-price">$19.99</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <div>
+            <button onclick="checkout()">Checkout</button>
+            <span id="total-price" style="float: right; margin-right: 10px;">Total: $0.00</span>
+        </div>
+    </div>
+    <div id="receiptModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 600px;">
+            <h2>Receipt</h2>
+            <pre id="receiptContent" style="white-space: pre-wrap;"></pre>
+            <button onclick="closeReceipt()" style="background-color: #000; color: white; border: none; padding: 10px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const cartItems = {};
+    const cartList = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+
+    function addToCart(productName, price) {
+        cartItems[productName] = (cartItems[productName] || 0) + 1;
+        updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+        let totalPrice = 0;
+        cartList.innerHTML = '';
+
+        for (let item in cartItems) {
+            let li = document.createElement('li');
+            let price = getPrice(item);
+            li.textContent = `${item} x${cartItems[item]} - $${(price * cartItems[item]).toFixed(2)}`;
+            cartList.appendChild(li);
+            totalPrice += price * cartItems[item];
+        }
+
+        totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
+
+    function getPrice(productName) {
+        switch (productName) {
+            case 'Kags-1': return 29.99;
+            case 'Kags-2': return 29.99;
+            case 'Kags-3': return 39.99;
+            case 'Kags-4': return productName.includes('Kags-4') && document.querySelector(`img[alt="${productName}"]`).src.includes('Virtualthreads (9).jpg') ? 44.99 : 34.99;
+            case 'Kags-5': return 19.99;
+            case 'Kags-6': return 59.99;
+            default: return 0;
+        }
+    }
+
+    function checkout() {
+        if (Object.keys(cartItems).length > 0) {
+            let paymentMethod = prompt("Select payment method (PayPal, Visa, MasterCard):");
+            if (paymentMethod && ["paypal", "visa", "mastercard"].includes(paymentMethod.toLowerCase())) {
+                processPayment(paymentMethod);
+            } else {
+                alert("Please select a valid payment method.");
+            }
+        } else {
+            alert('Your cart is empty!');
+        }
+    }
+
+    function processPayment(method) {
+        let cardNumber, expDate, cvc, email;
+        let paymentDetails = {};
+
+        switch(method.toLowerCase()) {
+            case 'visa':
+            case 'mastercard':
+                cardNumber = prompt("Please enter your card number:");
+                expDate = prompt("Please enter the expiration date (MM/YY):");
+                cvc = prompt("Please enter the CVC:");
+                if (cardNumber && expDate && cvc) {
+                    paymentDetails = {
+                        cardNumber: cardNumber,
+                        expDate: expDate,
+                        cvc: cvc
+                    };
+                    generateReceipt(method, paymentDetails);
+                } else {
+                    alert("All fields are required for card payment.");
+                }
+                break;
+
+            case 'paypal':
+                email = prompt("Please enter your PayPal email:");
+                if (email) {
+                    paymentDetails = { email: email };
+                    generateReceipt(method, paymentDetails);
+                } else {
+                    alert("Please enter a valid PayPal email.");
+                }
+                break;
+        }
+    }
+
+    function generateReceipt(method, paymentDetails) {
+        let receipt = `KAGS Collections Receipt\n\n`;
+        let totalPrice = 0;
+        for (let item in cartItems) {
+            let price = getPrice(item);
+            let itemTotal = price * cartItems[item];
+            receipt += `${item} x${cartItems[item]} - $${itemTotal.toFixed(2)}\n`;
+            totalPrice += itemTotal;
+        }
+        receipt += `\nTotal Amount: $${totalPrice.toFixed(2)}\n`;
+        receipt += `Payment Method: ${method.charAt(0).toUpperCase() + method.slice(1)}\n`;
+
+        if (method === 'visa' || method === 'mastercard') {
+            receipt += `Card Number: ${paymentDetails.cardNumber.slice(-4).padStart(paymentDetails.cardNumber.length, '*')}\n`;
+            receipt += `Expiration Date: ${paymentDetails.expDate}\n`;
+        } else if (method === 'paypal') {
+            receipt += `PayPal Email: ${paymentDetails.email}\n`;
+        }
+
+        receipt += `Thank you for shopping with us!`;
+
+        alert(receipt);
+        cartItems = {};
+        updateCartDisplay();
+    }
+    function generateReceipt(method, paymentDetails) {
+    let receipt = `KAGS Collections Receipt\n\n`;
+    let totalPrice = 0;
+    for (let item in cartItems) {
+        let price = getPrice(item);
+        let itemTotal = price * cartItems[item];
+        receipt += `${item} x${cartItems[item]} - $${itemTotal.toFixed(2)}\n`;
+        totalPrice += itemTotal;
+    }
+    receipt += `\nTotal Amount: $${totalPrice.toFixed(2)}\n`;
+    receipt += `Payment Method: ${method.charAt(0).toUpperCase() + method.slice(1)}\n`;
+
+    if (method === 'visa' || method === 'mastercard') {
+        receipt += `Card Number: ${paymentDetails.cardNumber.slice(-4).padStart(paymentDetails.cardNumber.length, '*')}\n`;
+        receipt += `Expiration Date: ${paymentDetails.expDate}\n`;
+    } else if (method === 'paypal') {
+        receipt += `PayPal Email: ${paymentDetails.email}\n`;
+    }
+
+    receipt += `Thank you for shopping with us!`;
+
+    document.getElementById('receiptContent').innerText = receipt;
+    document.getElementById('receiptModal').style.display = 'block';
+    cartItems = {};
+    updateCartDisplay();
+}
+
+function closeReceipt() {
+    document.getElementById('receiptModal').style.display = 'none';
+}
+
+// Change the checkout function to use the new modal for the receipt
+function checkout() {
+    if (Object.keys(cartItems).length > 0) {
+        let paymentMethod = prompt("Select payment method (PayPal, Visa, MasterCard):");
+        if (paymentMethod && ["paypal", "visa", "mastercard"].includes(paymentMethod.toLowerCase())) {
+            processPayment(paymentMethod);
+        } else {
+            alert("Please select a valid payment method.");
+        }
+    } else {
+        alert('Your cart is empty!');
+    }
+}
+</script>
+</body>
+</html>
